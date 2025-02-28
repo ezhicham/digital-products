@@ -186,3 +186,83 @@ margin: 5px 0;
   text-transform: capitalize;
 
 }
+
+/* media query section  */
+
+@media screen and (max-width: 900px){
+    .into-website {
+      width: 80%;
+      margin-top: 30px;
+    }
+    .home-page h1 {
+      font-size: 50px;
+    }
+    .home-page .into-website h1 span{
+      font-size: 50px;
+    }
+    .home-page .into-website p{
+      font-size: 14px;
+    }
+    .home-page .into-website button{
+      font-size: 14px;
+    }
+    .webstite-info{
+      height: 150px;
+    }
+    .display-produtcs .prodcut-card{
+      width: 250px;
+    }
+    .display-produtcs .prodcut-card h2{
+      font-size: 16px;
+    }
+    .display-produtcs .prodcut-card .pro-info span{
+      font-size: 10px;
+    }
+    .display-produtcs .prodcut-card  p{
+      font-size: 12px;
+    }
+    .display-produtcs .prodcut-card button{
+      font-size: 14px;
+    }
+}
+  @media screen and (max-width: 768px){
+
+  
+    .container {
+      margin-top: 50px;
+    }
+    .into-website {
+      width: 90%;
+    }
+    .home-page h1 {
+      font-size: 40px;
+    }
+    .home-page .into-website h1 span{
+      font-size: 40px;
+    }
+    .home-page .into-website p{
+      font-size: 14px;
+    }
+    .home-page .into-website button{
+      font-size: 14px;
+    }
+    .webstite-info{
+      height: 150px;
+    }
+    .display-produtcs .prodcut-card{
+      width: 100%;
+    }
+    .display-produtcs .prodcut-card h2{
+      font-size: 16px;
+    }
+    .display-produtcs .prodcut-card .pro-info span{
+      font-size: 10px;
+    }
+    .display-produtcs .prodcut-card  p{
+      font-size: 12px;
+    }
+    .display-produtcs .prodcut-card button{
+      font-size: 14px;
+    }
+    
+  }

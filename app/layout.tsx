@@ -18,7 +18,6 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
   { name: "Contact", href: "/contact" },
 ]
 export default function RootLayout({
@@ -31,8 +30,8 @@ export default function RootLayout({
       <body className={poppins.className}>
 
         {/* <Navbar/>    */}
-        <nav className="navbar w-full h-[80px]  bg-white shadow-md">
-        <div className=" w-full h-full p-10 flex items-center justify-between">
+        <nav className="navbar w-full h-[80px]  shadow-md">
+        <div className=" w-full h-full p-5 flex items-center justify-between">
           <div className="logo">
             <h1>accs<span className="text-orange-500 font-bold ">Bulk</span></h1>
           </div>
