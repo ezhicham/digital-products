@@ -16,23 +16,20 @@ const formSchema = z.object({
   description: z.string().min(1, "Description is required"),
 })
 
-export default function PaymentForm() {
+interface PaymentFormProps {
+  totalpriceCheckout: string;
+}
+
+export default function PaymentForm({ totalpriceCheckout }: PaymentFormProps) {
   const [isLoading, setIsLoading] = useState(false)
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      amount: "10.00",
-      description: "Payment for services",
-    },
-  })
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  
+   const handlepayeerPayement= async  ()=> {
     setIsLoading(true)
     try {
       const response = await createPayment({
-        amount: Number.parseFloat(values.amount),
-        description: values.description,
+        amount: Number.parseFloat(totalpriceCheckout),
+        description: "Payment for products",
       })
 
       if (response.url) {
@@ -46,56 +43,9 @@ export default function PaymentForm() {
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Make a Payment</CardTitle>
-        <CardDescription>Enter payment details to proceed with Payeer</CardDescription>
-      </CardHeader>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
-          <CardContent className="space-y-4">
-            <FormField
-              control={form.control}
-              name="amount"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Amount (USD)</FormLabel>
-                  <FormControl>
-                    <Input placeholder="10.00" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="description"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Description</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Payment for services" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </CardContent>
-          <CardFooter>
-            <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Processing....
-                </>
-              ) : (
-                "Pay with Payeer"
-              )}
-            </Button>
-          </CardFooter>
-        </form>
-      </Form>
-    </Card>
+    <div>
+      <button className=" w-full bg-blue-400 text-white p-2 rounded-sm mx-5" onClick={handlepayeerPayement}>{!isLoading?"pay with payeer":"loading..."}</button>
+    </div>
   )
 }
 

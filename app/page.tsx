@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faBagShopping, faCartShopping, faStore, faTruckFast,  } from '@fortawesome/free-solid-svg-icons';
 import "./home.css";
 import { id } from 'date-fns/locale';
+import Link from 'next/link';
 export default function Home() {
 
   const products = [
@@ -106,9 +107,9 @@ export default function Home() {
 
         {/* ==============each product======================  */}
 
-        {products.map((product) => (
+        {products.map((product,index) => (
           
-             <article  key={product.id}  className="prodcut-card">
+             <article  key={index}  className="prodcut-card">
           <div className="card-img"><img src={product.img} alt="" /></div>
           <div className="card-body">
             <h2>{product.name}  </h2>
@@ -118,7 +119,7 @@ export default function Home() {
               <span>stock:{product.stock}pcs</span>
             </div>
             <p>{product.description}</p>
-            <button><p>order now </p><FontAwesomeIcon icon={faCartShopping} width={"25"} className="text-brown-500" /></button>
+            <Link href={`/productDetails/${product.id}`}><p>order now </p><FontAwesomeIcon icon={faCartShopping} width={"25"} className="text-brown-500" /></Link>
           </div>
 
         </article>

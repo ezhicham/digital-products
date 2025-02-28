@@ -160,7 +160,7 @@ margin: 5px 0;
   text-transform: capitalize;
   
 }
-.display-produtcs .prodcut-card button{
+.display-produtcs .prodcut-card a{
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -180,7 +180,7 @@ margin: 5px 0;
 }
 
 
-.display-produtcs .prodcut-card button p{
+.display-produtcs .prodcut-card a p{
   color: white;
   font-size: 16px;
   text-transform: capitalize;
