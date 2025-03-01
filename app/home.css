@@ -82,17 +82,24 @@
 
 .webstite-info .info-card{
   /* text-align: center; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 5px;
+  text-align: center;
+  
+  
+  
 
 }
 .webstite-info .info-card  svg{
   /* font-size: 30px!important; */
-  color: rgb(255, 157, 0);
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #ffbb01;
+  margin: auto;
+
+  
+}
+.webstite-info .info-card p{
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: capitalize;
+  background: linear-gradient(to right, #ff7e5f, #eeedeb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -247,7 +254,17 @@ margin: 5px 0;
       font-size: 14px;
     }
     .webstite-info{
-      height: 150px;
+      height: fit-content !important;
+    }
+  
+    .webstite-info .info-card svg{
+      font-size: 12px;
+      width: 20px;
+      
+    }
+    .webstite-info .info-card p{
+      font-size: 10px;
+      
     }
     .display-produtcs .prodcut-card{
       width: 100%;
