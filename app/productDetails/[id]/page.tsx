@@ -85,8 +85,8 @@ const targetProduct = products.find(product => product.id === Number(params.id))
                 }
                 } placeholder='100pcs' type="number" name="quantity" id="quantity" />
               </div>
-              <div className="totalPrice  text-green-600 bg-green-100 rounded-sm   m-3">
-                <p>Total Price: {totalPrice}$</p>
+              <div className="totalPrice  bg-green-100 rounded-sm p-2  w-fit ">
+                <strong className=' text-green-600'>Total Price: {totalPrice}$</strong>
                 
               </div>
             </div>
