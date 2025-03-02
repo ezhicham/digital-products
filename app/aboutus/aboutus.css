@@ -91,6 +91,7 @@
   }
   .about-us-page .about-us-intro{
     flex-direction: column;
+    padding: 5px;
   }
   .about-us-page .about-us-text{
     width: 100%;

@@ -229,7 +229,8 @@ margin: 5px 0;
       font-size: 12px;
     }
     .display-produtcs .prodcut-card .pro-info span{
-      font-size: 10px;
+      font-size: 8px;
+      font-weight: bold;
     }
     .display-produtcs .prodcut-card  p{
       font-size: 12px;
