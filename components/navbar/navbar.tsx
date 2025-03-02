@@ -112,12 +112,12 @@ export function Navbar({ items, children }: NavbarProps) {
               <div className="flex flex-col gap-2 mt-4">
                 {children || (
                   <>
-                    <Link href="/login" onClick={() => setIsOpen(false)}>
+                    <Link href="/auth/login" onClick={() => setIsOpen(false)}>
                       <Button variant="ghost" className="w-full justify-start">
                         Login
                       </Button>
                     </Link>
-                    <Link href="/register" onClick={() => setIsOpen(false)}>
+                    <Link href="/auth/register" onClick={() => setIsOpen(false)}>
                       <Button className="w-full">Sign Up</Button>
                     </Link>
                   </>
