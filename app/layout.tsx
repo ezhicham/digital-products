@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         {/* <Navbar/> */}
         <nav className="navbar w-full h-[80px] shadow-md">
-          <div className="nav-items w-full h-full p-5 ">
+          <div className="nav-items w-full h-full  ">
 
             <div className="logo">
               <h1>
@@ -59,10 +59,10 @@ export default function RootLayout({
              </div>
             
             
-            <div className="theme-mode flex items-center gap-5 text-white">
+            {/* <div className="theme-mode flex items-center gap-5 text-white">
               <Sun size={24} />
               
-            </div>
+            </div> */}
 
 
 
