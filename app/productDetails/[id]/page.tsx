@@ -60,7 +60,7 @@ function page({ params }: { params: { id: string } }) {
 
 const targetProduct = products.find(product => product.id === Number(params.id))
   return (
-    <div>
+    <div className='product-details-page'>
 
 
         
@@ -85,9 +85,9 @@ const targetProduct = products.find(product => product.id === Number(params.id))
                 }
                 } placeholder='100pcs' type="number" name="quantity" id="quantity" />
               </div>
-              <div className="totalPrice p-2  text-green-600 bg-green-100 flex items-center justify-center gap-5px w-[200px] m-3">
-                <h2>Total Price:</h2>
-                <h2 >{totalPrice}$</h2>
+              <div className="totalPrice  text-green-600 bg-green-100 rounded-sm   m-3">
+                <p>Total Price: {totalPrice}$</p>
+                
               </div>
             </div>
         ):   <h1 className='text-red-400 bg-red-200 text-center'>Product not found</h1>

@@ -35,7 +35,7 @@ export default function PaymentForm({ totalpriceCheckout }: PaymentFormProps) {
 
   return (
     <div>
-      <button className=" w-full bg-blue-400 text-white p-2 rounded-sm mx-5" onClick={handlepayeerPayement}>{!isLoading?"pay with payeer":"loading..."}</button>
+      <button className=" w-[200px] bg-blue-400 text-white p-2 rounded-sm mx-5" onClick={handlepayeerPayement}>{!isLoading?"pay with payeer":"loading..."}</button>
     </div>
   )
 }

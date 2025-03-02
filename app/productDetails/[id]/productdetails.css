@@ -1,3 +1,9 @@
+.product-details-page{
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+}
+
 .product-details{
     display: flex;
     justify-content: center;
@@ -5,9 +11,9 @@
     gap: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
+  
+
+  
 
 }
 .product-details img{
