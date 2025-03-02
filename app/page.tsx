@@ -97,7 +97,10 @@ export default function Home() {
                the digital world.</p>
 
         
+        <div className="btns flex items-center gap-2">
         <button>discover products</button>
+        <button>become partner</button>
+        </div>
       </div>
 
 

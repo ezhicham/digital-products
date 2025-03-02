@@ -41,8 +41,8 @@
 }
 
 .home-page .into-website button{
-  padding: 10px 20px;
-       background-image: linear-gradient(45deg, #ff8d03f0 , #ff8d03f0);
+  padding: 10px;
+   background-image: linear-gradient(45deg, #ff8d03f0 , #ff8d03f0);
   color: white;
   font-size: 20px;
   border: none;
@@ -152,13 +152,11 @@ margin: 5px 0;
 @media screen and (max-width: 900px){
     .into-website {
       width: 80%;
-      margin-top: 30px;
+      margin-top: 50px;
     }
-    .home-page h1 {
-      font-size: 50px;
-    }
+    
     .home-page .into-website h1 span{
-      font-size: 50px;
+      font-size: 30px;
     }
     .home-page .into-website p{
       font-size: 14px;
@@ -188,7 +186,9 @@ margin: 5px 0;
   @media screen and (max-width: 768px){
 
   
-  
+    .home-page {
+      margin: 25px;
+    }
     .into-website {
       width: 95%;
     }
@@ -198,13 +198,14 @@ margin: 5px 0;
       
     }
     .home-page .into-website h1 span{
-      font-size: 40px;
+      font-size: 25px;
     }
     .home-page .into-website p{
-      font-size: 14px;
+      font-size: 12px;
     }
+    
     .home-page .into-website button{
-      font-size: 14px;
+      font-size: 12px;
     }
     .display-produtcs{
       width: 100%;
