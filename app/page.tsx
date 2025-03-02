@@ -57,13 +57,12 @@ export default function Home() {
   
 
   return (
-    <main className=" home-page ">
+    <div className="home-page ">
 {/* ========navbar just for test ====================== */}
 
       
 
-    {/* container of our content */}
-        <div className="container">
+
 
         
        
@@ -119,8 +118,8 @@ export default function Home() {
 
         
       </section>
-      </div>
-    </main>
+    
+    </div>
   )
 }
 

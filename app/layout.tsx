@@ -6,6 +6,7 @@ import Footer from "@/components/footer/footer";
 
 import "./globals.css";
 import Link from "next/link";
+import { Navbar } from "@/components/navbar/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
@@ -33,41 +34,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         {/* <Navbar/> */}
-        <nav className="navbar w-full h-[80px] shadow-md">
-          <div className="nav-items w-full h-full  ">
+        
 
-            <div className="logo">
-              <h1>
-                <Link href="/">
-                accs<span className="text-orange-500 font-bold">Bulk</span></Link>
-              </h1>
-            </div>
-
-
-             <div className="nav-links">
-             <ul  className="flex">
-             {navItems.map((item,index) => {
-              return(
-                
-                  <li key={index}><Link href={item.href}>{item.name}</Link></li>
-              
-              )
-              
-            }
-                   )}
-              </ul>
-             </div>
-            
-            
-            {/* <div className="theme-mode flex items-center gap-5 text-white">
-              <Sun size={24} />
-              
-            </div> */}
-
-
-
-          </div>
-        </nav>
+        <Navbar/>
 
         {children}
 
