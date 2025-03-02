@@ -1,0 +1,22 @@
+.rules-page{
+width: 90%;
+margin: auto;
+margin-top: 100px;
+}
+.rules-page h1{
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  width: fit-content;
+  padding: 5px;
+  border: 1px dashed orange;
+  margin: auto;
+}
+
+.rules-page ul li{
+  color: rgb(158, 158, 158);
+}
+
+.rules-page .title{
+  color:rgb(255, 119, 0)
+}

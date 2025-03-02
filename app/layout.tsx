@@ -1,57 +1,78 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter, Montserrat, Poppins } from "next/font/google"
-import "./globals.css"
-// import Navbar from "@/components/Navbar"
-const inter = Inter({ subsets: ["latin"] })
-const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter, Montserrat, Poppins } from "next/font/google";
+import { Moon, Sun } from "lucide-react";
+import Footer from "@/components/footer/footer";
 
+import "./globals.css";
+import Link from "next/link";
+
+const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Payeer Payment Integration",
   description: "Next.js application with Payeer payment integration",
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "About", href: "/aboutus" },
   { name: "Services", href: "/services" },
   { name: "Contact", href: "/contact" },
-]
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={poppins.className}>
+        {/* <Navbar/> */}
+        <nav className="navbar w-full h-[80px] shadow-md">
+          <div className="nav-items w-full h-full p-5 ">
 
-        {/* <Navbar/>    */}
-        <nav className="navbar w-full h-[80px]  shadow-md">
-        <div className=" w-full h-full p-5 flex items-center justify-between">
-          <div className="logo">
-            <h1>accs<span className="text-orange-500 font-bold ">Bulk</span></h1>
+            <div className="logo">
+              <h1>
+                <Link href="/">
+                accs<span className="text-orange-500 font-bold">Bulk</span></Link>
+              </h1>
+            </div>
+
+
+             <div className="nav-links">
+             <ul  className="flex">
+             {navItems.map((item,index) => {
+              return(
+                
+                  <li key={index}><Link href={item.href}>{item.name}</Link></li>
+              
+              )
+              
+            }
+                   )}
+              </ul>
+             </div>
+            
+            
+            <div className="theme-mode flex items-center gap-5 text-white">
+              <Sun size={24} />
+              
+            </div>
+
+
+
           </div>
-          <ul className="nav-items flex items-center gap-5">
-            {navItems.map((item, index) => (
-              <li key={index}>
-                <a href={item.href}>{item.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
-        
-             {children}
+        </nav>
 
+        {children}
+
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
-
-
-
-import './globals.css'

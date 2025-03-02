@@ -1,0 +1,82 @@
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: #7e7f871c;
+  border: 1px solid rgba(128, 128, 128, 0.655);
+}
+
+footer{
+  width: 100%;
+  height: fit-content;
+  background-color: #7e7f871c;
+  border: 1px solid rgba(128, 128, 128, 0.655);
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-top: 50px;
+  
+
+
+}
+
+footer .footer-part{
+  width: 20% ;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+footer .footer-part h3{
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 184, 4);
+}
+footer .footer-part p{
+  font-size: 14px;
+}
+
+footer .footer-part p a{
+  color: #0a99ff;
+  text-decoration: underline solid #0a99ff;
+}
+
+.footer-part .payment-icons{
+  padding: 2px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;  
+  gap: 5px;
+  justify-content: center;
+  width: fit-content;
+}
+.footer-part .payment-icons img{
+  width: 40px;
+  
+}
+
+@media screen and (max-width: 768px){
+  footer{
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .footer-part{
+    width: 100%;
+  }
+  footer .footer-part h3{
+    font-size: 14px;
+  }
+  footer .footer-part p{
+    font-size: 12px;
+  }
+  footer .footer-part .payment-icons img{
+    width: 30px;
+  } 
+  
+}

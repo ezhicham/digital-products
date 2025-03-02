@@ -4,8 +4,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faBagShopping, faCartShopping, faStore, faTruckFast,  } from '@fortawesome/free-solid-svg-icons';
 import "./home.css";
-import { id } from 'date-fns/locale';
+import Websiteinfo from '../components/websiteinfo/website-info';
 import Link from 'next/link';
+import { ShoppingCart } from 'lucide-react';
 export default function Home() {
 
   const products = [
@@ -15,7 +16,7 @@ export default function Home() {
       price: 20,      
       slodout: 200,
       stock: 2220,
-      description: "🔥 Twitter Accounts for Sale! 🔥✅ Verified with Email (Included in the set)📅 Created in 2009 – Aged & Trusted📝 3 Posts – Clean & Ready for Use🚀 Perfect for branding, reselling, or personal use! DM for details 💬"
+      description: "🔥 Twitter Accounts for Sale! 🔥✅ Verified with Email (Included in the set)📅 Created in 2009 – Aged & Trusted📝 3 Posts ... "
     },
     {
       id: 2,
@@ -24,7 +25,7 @@ export default function Home() {
       price: 15,
       slodout: 43,
       stock: 120,
-      description: "🔥 youtube premuime for Sale! 🔥✅ Verified with Email (Included in the set)🚀 Perfect for watching without ads , reselling, or personal use! DM for details.     💬."
+      description: "🔥 youtube premuime for Sale! 🔥✅ Verified with Email (Included in the set)..."
     },
     {
       name: "reddit accounts 2009 full access",
@@ -32,7 +33,7 @@ export default function Home() {
       price: 20,
       slodout: 200,
       stock: 2220,  
-      description: "🔥 reddit Accounts for Sale! 🔥✅ Verified with Email (Included in the set)📅 Created in 2009 – Aged & Trusted📝 3 Posts – Clean & Ready for Use🚀 Perfect for branding, reselling, or personal use! DM for detail. 💬"
+      description: "🔥 reddit Accounts for Sale! 🔥✅ Verified with Email (Included in the set)📅 Created in 2009 – Aged & Trusted📝 3 Posts – Clean & Ready for Use🚀 ..."
     },
     {
       id: 3,
@@ -50,7 +51,7 @@ export default function Home() {
       price: 20,
       slodout: 200,
       stock: 2220,
-      description: "🔥 facebook Accounts for Sale! 🔥✅ Verified with Email (Included in the set)📅 Created in 2009 – Aged & Trusted📝 3 Posts – Clean & Ready for Use🚀 Perfect for branding, reselling, or personal use! DM for details. 💬"
+      description: "🔥 facebook Accounts for Sale! 🔥✅ Verified with Email (Included in the set)📅 Created in 2009 ..."
     }
   ]
   
@@ -88,20 +89,7 @@ export default function Home() {
 
 
               {/* info about  website  */}
-              <section className="webstite-info">
-                <div className="info-card">
-                 <FontAwesomeIcon width={"40"} icon={faStore} /> 
-                  <p>huge stock of accounts</p>
-                </div>
-                <div className="info-card">
-                  <FontAwesomeIcon width={"40"} icon={faBagShopping} />  
-                  <p>  +22.033 successfully orders</p>
-                </div>
-                <div className="info-card">
-                  <FontAwesomeIcon width={"40"}  icon={faTruckFast} />  
-                  <p> get your order instatly </p>
-                </div>  
-              </section>
+              <Websiteinfo/>
               {/* dislpay our products  */}
       <section className="display-produtcs">
 
@@ -118,8 +106,8 @@ export default function Home() {
               <span>slodout: {product.slodout}pcs</span>
               <span>stock:{product.stock}pcs</span>
             </div>
-            <p>{product.description}</p>
-            <Link href={`/productDetails/${product.id}`}><p>order now </p><FontAwesomeIcon icon={faCartShopping} width={"25"} className="text-brown-500" /></Link>
+            <p>{product.description}...</p>
+            <Link href={`/productDetails/${product.id}`}><p>order now </p><ShoppingCart size={"20"}/></Link>
           </div>
 
         </article>

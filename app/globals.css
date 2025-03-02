@@ -73,14 +73,14 @@
   body {
     /* @apply bg-background text-foreground; */
   background-color: rgb(16, 16, 34);
+
   }
 }
 
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  
   padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -88,13 +88,33 @@
   border-radius: 4px;
   transition: all 0.3s ease;
 }
+.navbar .nav-items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .navbar .logo h1 {
   color: white;
+}
+/* .navbar .nav-links{
+
+} */
+.navbar .nav-links{
+  width: 60%;
+}
+.navbar .nav-links ul {
+  display: flex !important;
+  /* flex-direction: row; */
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  /* background-color: red; */
+
 }
 .navbar ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: capitalize;
   
 }

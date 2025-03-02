@@ -1,0 +1,75 @@
+/* websit infor section  */
+
+.webstite-info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: rgba(154, 154, 154, 0.122);
+  background-image: linear-gradient(to right , #7350F2 , rgba(115, 80, 242, 0.096));
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+  border: 2px dashed rgb(255, 157, 0);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.webstite-info .info-card{
+  /* text-align: center; */
+  text-align: center;
+  
+  
+  
+
+}
+.webstite-info .info-card  svg{
+  /* font-size: 30px!important; */
+  color: #ffbb01;
+  margin: auto;
+
+  
+}
+.webstite-info .info-card p{
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: capitalize;
+  background: linear-gradient(to right, #ff7e5f, #eeedeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 900px){
+  .webstite-info{
+    height: fit-content !important;
+  }
+  .webstite-info .info-card{
+    margin-top: 20px;
+  }
+  .webstite-info .info-card p{
+    font-size: 16px;
+  }
+  .webstite-info .info-card svg{
+    font-size: 200px;
+  }
+  
+}
+
+@media screen and (max-width: 768px){
+  .webstite-info{
+    height: fit-content !important;
+  }
+
+  .webstite-info .info-card svg{
+    font-size: 12px;
+    width: 20px;
+    
+  }
+  .webstite-info .info-card p{
+    font-size: 10px;
+    
+  }
+  
+}

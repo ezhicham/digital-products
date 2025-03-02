@@ -1,0 +1,22 @@
+.product-issued{
+  width: 90%;
+  margin: auto;
+  margin-top: 100px;
+  }
+  .product-issued h1{
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    width: fit-content;
+    padding: 5px;
+    border: 1px dashed orange;
+    margin: auto;
+  }
+  
+  .product-issued ul li{
+    color: rgb(158, 158, 158);
+  }
+  
+  .product-issued .title{
+    color:rgb(255, 119, 0)
+  }

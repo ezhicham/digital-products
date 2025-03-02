@@ -61,48 +61,7 @@
   font-size: 16px;
   transition: all 0.3s ease;
 }
-/* websit infor section  */
 
-.webstite-info{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  background-color: rgba(154, 154, 154, 0.122);
-  background-image: linear-gradient(to right , #7350F2 , rgba(115, 80, 242, 0.096));
-  color: white;
-  font-size: 16px;
-  text-transform: capitalize;
-  border: 2px dashed rgb(255, 157, 0);
-  border-radius: 8px;
-  padding: 10px;
-  margin-top: 50px;
-}
-
-.webstite-info .info-card{
-  /* text-align: center; */
-  text-align: center;
-  
-  
-  
-
-}
-.webstite-info .info-card  svg{
-  /* font-size: 30px!important; */
-  color: #ffbb01;
-  margin: auto;
-
-  
-}
-.webstite-info .info-card p{
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: capitalize;
-  background: linear-gradient(to right, #ff7e5f, #eeedeb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 /* display the products section  */
 
 .display-produtcs{
@@ -189,9 +148,12 @@ margin: 5px 0;
 
 .display-produtcs .prodcut-card a p{
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: capitalize;
 
+}
+.display-produtcs .prodcut-card a svg{
+  width: 20px;
 }
 
 /* media query section  */
@@ -228,7 +190,7 @@ margin: 5px 0;
     .display-produtcs .prodcut-card  p{
       font-size: 12px;
     }
-    .display-produtcs .prodcut-card button{
+    .display-produtcs .prodcut-card a p{
       font-size: 14px;
     }
 }
@@ -237,6 +199,8 @@ margin: 5px 0;
   
     .container {
       margin-top: 50px;
+      width: 100%;
+      padding: 0px;
     }
     .into-website {
       width: 90%;
@@ -253,24 +217,16 @@ margin: 5px 0;
     .home-page .into-website button{
       font-size: 14px;
     }
-    .webstite-info{
-      height: fit-content !important;
-    }
-  
-    .webstite-info .info-card svg{
-      font-size: 12px;
-      width: 20px;
-      
-    }
-    .webstite-info .info-card p{
-      font-size: 10px;
-      
+    .display-produtcs{
+      width: 100%;
+      gap: 3px;
     }
     .display-produtcs .prodcut-card{
-      width: 100%;
+      width: 45%;
+      padding: 2px;
     }
     .display-produtcs .prodcut-card h2{
-      font-size: 16px;
+      font-size: 12px;
     }
     .display-produtcs .prodcut-card .pro-info span{
       font-size: 10px;
@@ -278,8 +234,10 @@ margin: 5px 0;
     .display-produtcs .prodcut-card  p{
       font-size: 12px;
     }
-    .display-produtcs .prodcut-card button{
-      font-size: 14px;
+    .display-produtcs .prodcut-card a {
+      font-size: 10px;
     }
-    
+    .display-produtcs .prodcut-card a svg{
+      width: 20px;
+    }
   }
