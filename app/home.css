@@ -12,7 +12,7 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  width: 60%;
+  width: 70%;
   text-align: center;
  margin: auto;
 
@@ -24,7 +24,7 @@
   color: white;
 
   font-weight: bold;
-  height: 100px;
+
   
 }
 .home-page .into-website h1 span{
@@ -38,11 +38,12 @@
   text-align: center;
   text-transform: capitalize;
   width: 100%;
+  margin-top: 10px;
 }
 
 .home-page .into-website button{
   padding: 10px;
-   background-image: linear-gradient(45deg, #ff8d03f0 , #ff8d03f0);
+   background-image: linear-gradient(45deg, #ff8d03f0 , #ff6403f0);
   color: white;
   font-size: 20px;
   border: none;
@@ -53,6 +54,18 @@
   transition: all 0.3s ease;
 }
 
+
+.home-page .into-website button.partner{
+  background-image: none;
+  background-color: transparent;
+  border: 1px dashed orangered;
+  color: orangered;
+  transition: 0.3s linear all;
+}
+.home-page .into-website button.partner:hover{
+  background-color: orangered;
+  color: white;
+}
 /* display the products section  */
 
 .display-produtcs{
@@ -187,17 +200,20 @@ margin: 5px 0;
 
   
     .home-page {
-      margin-top: 25px;
+      margin-top: 10px;
         width: 100%;
         padding: 5px;
     }
     
-    
+    .home-page .into-website {
+      width: 100%;
+
+    }
     .home-page .into-website h1 span{
       font-size: 25px;
     }
     .home-page .into-website p{
-      margin-top: 20px;
+      margin-top: 10px;
       font-size: 14px;
     }
     

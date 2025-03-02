@@ -98,8 +98,8 @@ export default function Home() {
 
         
         <div className="btns flex items-center gap-2">
-        <button>discover products</button>
-        <button>become partner</button>
+        <button>Discover Products</button>
+        <button className="partner">Become Partner</button>
         </div>
       </div>
 
