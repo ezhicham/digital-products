@@ -1,12 +1,11 @@
+"use client"
 
-
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faBagShopping, faCartShopping, faStore, faTruckFast,  } from '@fortawesome/free-solid-svg-icons';
 import "./home.css";
 import Websiteinfo from '../components/websiteinfo/website-info';
 import Link from 'next/link';
 import { ShoppingCart } from 'lucide-react';
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 export default function Home() {
 
   const products = [
@@ -56,6 +55,22 @@ export default function Home() {
   ]
   
 
+  const typedRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (typedRef.current) {
+      const typed = new Typed(typedRef.current, {
+        strings: ["🚀 1#   digital products market ", "Enjoy your visit! ❤️ "],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+      });
+
+      return () => typed.destroy();
+    }
+  }, []);
+
+
   return (
     <div className="home-page ">
 {/* ========navbar just for test ====================== */}
@@ -73,7 +88,7 @@ export default function Home() {
 
       {/* hero section */}
       <div className="into-website">
-        <h1 className=""> <span> 🚀  1#   digital products</span> market </h1>
+        <h1 className=""> <span ref={typedRef}>   </span> </h1>
         <p>shop now +1000 trend products from one store   pay
              get product instant  
               Our store offers a wide range of digital products to cater to all your
