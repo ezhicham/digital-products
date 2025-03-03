@@ -1,26 +1,20 @@
-"use server"
-
-interface PaymentData {
+// lib/payeer.ts
+export interface PaymentData {
   amount: number
   description: string
 }
 
-interface PaymentResponse {
+export interface PaymentResponse {
   url?: string
   error?: string
 }
 
 // Helper function to create SHA-256 hash
 async function sha256(message: string): Promise<string> {
-  // Encode the message as UTF-8
   const msgBuffer = new TextEncoder().encode(message)
-
-  // Hash the message using the Web Crypto API
   const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer)
-
-  // Convert the hash to hex string
   const hashArray = Array.from(new Uint8Array(hashBuffer))
-  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("")
+  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("").toUpperCase()
 }
 
 export async function createPayment(data: PaymentData): Promise<PaymentResponse> {
@@ -33,26 +27,24 @@ export async function createPayment(data: PaymentData): Promise<PaymentResponse>
       throw new Error("Missing environment variables")
     }
 
-    // Generate a unique order ID
     const orderId = `ORDER-${Date.now()}-${Math.floor(Math.random() * 1000)}`
-
-    // Format amount to 2 decimal places
     const amount = data.amount.toFixed(2)
+    const currency = "USD"
+    const descriptionBase64 = Buffer.from(data.description).toString("base64")
 
-    // Create signature
-    const signString = `92E6CF96381FF2340A835C1A762292C43A086E3DE6103DC6ADCABEB8EB164679`
-    // const sign = await sha256(signString)
+    // Correct signature format
+    const signString = `${merchantId}:${amount}:${currency}:${descriptionBase64}:${orderId}:${secretKey}`
+    const sign = (await sha256(signString)).toUpperCase()
 
-    // Construct the payment URL
     const paymentUrl = new URL("https://payeer.com/merchant/")
 
     const params = {
       m_shop: merchantId,
-      m_amount: amount,
-      m_curr: "USD",
-      m_desc: Buffer.from(data.description).toString("base64"),
       m_orderid: orderId,
-      m_sign: signString,
+      m_amount: amount,
+      m_curr: currency,
+      m_desc: descriptionBase64,
+      m_sign: sign,
       success_url: `${appUrl}/payment/success`,
       fail_url: `${appUrl}/payment/failed`,
       status_url: `${appUrl}/api/payeer/callback`,
@@ -68,4 +60,3 @@ export async function createPayment(data: PaymentData): Promise<PaymentResponse>
     return { error: "Failed to create payment" }
   }
 }
-

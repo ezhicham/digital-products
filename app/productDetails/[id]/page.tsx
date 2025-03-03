@@ -1,10 +1,11 @@
 "use client";
 
-import PaymentForm from '@/components/payment-form'
+import PaymentForm from '@/components/PayeerButton'
 import React from 'react' 
 import './productdetails.css'
 
 import { useState } from 'react';
+import PayeerButton from '@/components/PayeerButton';
 function page({ params }: { params: { id: string } }) {
 
 
@@ -96,7 +97,7 @@ const targetProduct = products.find(product => product.id === Number(params.id))
       
 
 
-         <PaymentForm   totalpriceCheckout={totalPrice.toString()} />
+         <PayeerButton />
       
     </div>
   )
