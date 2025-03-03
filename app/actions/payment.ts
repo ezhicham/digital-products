@@ -40,7 +40,7 @@ export async function createPayment(data: PaymentData): Promise<PaymentResponse>
     const amount = data.amount.toFixed(2)
 
     // Create signature
-    const signString = `${merchantId}:${amount}:USD:${secretKey}:${orderId}`
+    const signString = `92E6CF96381FF2340A835C1A762292C43A086E3DE6103DC6ADCABEB8EB164679`
     const sign = await sha256(signString)
 
     // Construct the payment URL
