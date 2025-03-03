@@ -34,6 +34,7 @@ export default function Home() {
       description: "🔥 youtube premuime for Sale! 🔥✅ Verified with Email (Included in the set)..."
     },
     {
+      id:3,
       name: "reddit accounts 2009 full access",
       img: "https://i.pinimg.com/736x/b5/6a/48/b56a488ed215d206d32a855300366ee1.jpg",
       price: 20,
@@ -42,7 +43,7 @@ export default function Home() {
       description: "🔥 reddit Accounts for Sale! 🔥✅ Verified with Email (Included in the set)📅 Created in 2009 – Aged & Trusted📝 3 Posts – Clean & Ready for Use🚀 ..."
     },
     {
-      id: 3,
+      id: 4,
       name: "spotify premuime 1 year  full access",
       img: "https://i.pinimg.com/736x/b6/8d/37/b68d37447bde9b019e9f0952ff30c4b7.jpg",
       price: 20,
@@ -51,7 +52,7 @@ export default function Home() {
       description: "🔥 spotify premuime for Sale! 🔥✅  1 year warranty ✅ , reselling, or personal use! DM for details. 💬"
     },
     {
-      id: 4,
+      id: 5,
       name: "strong facebook accounts",
       img: "https://i.pinimg.com/736x/39/f3/c1/39f3c13f07d83b9dbd4cdd533ec7a2d5.jpg",
       price: 20,

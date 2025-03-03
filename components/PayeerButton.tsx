@@ -2,7 +2,12 @@
 
 import React from 'react';
 
-const PayeerButton: React.FC = () => {
+interface PayeerButtonProps {
+  amount: number;
+  
+}
+
+const PayeerButton: React.FC<PayeerButtonProps> = ({ amount }) => {
   const handlePayment = async () => {
     const response = await fetch('/api/payeer', {
       method: 'POST',
@@ -10,9 +15,9 @@ const PayeerButton: React.FC = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        amount: 10, // Amount in your currency's smallest unit
-        currency: 'USD',
-        description: 'Test Payment',
+        amount, // Use the props value for amount
+        currency:"USD", // Use the props value for currency
+        description:"pay with Payer", // Use the props value for description
       }),
     });
 
@@ -25,7 +30,7 @@ const PayeerButton: React.FC = () => {
   };
 
   return (
-    <button onClick={handlePayment}>
+    <button className='text-white bg-primary rounded-sm p-2' onClick={handlePayment}>
       Pay with Payeer
     </button>
   );
