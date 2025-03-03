@@ -40,7 +40,7 @@ export async function POST(request: Request) {
     }
 
     // Create the signature string for comparison
-    const signString = `92E6CF96381FF2340A835C1A762292C43A086E3DE6103DC6ADCABEB8EB164679`
+    const signString = `${m_operation_id}:${m_operation_ps}:${m_operation_date}:${m_operation_pay_date}:${m_shop}:${m_orderid}:${m_amount}:${m_curr}:${m_desc}:${m_status}:${secretKey}`
     const calculatedSign = await sha256(signString)
 
     // Compare the calculated signature with the provided signature

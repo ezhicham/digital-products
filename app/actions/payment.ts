@@ -41,7 +41,7 @@ export async function createPayment(data: PaymentData): Promise<PaymentResponse>
 
     // Create signature
     const signString = `92E6CF96381FF2340A835C1A762292C43A086E3DE6103DC6ADCABEB8EB164679`
-    const sign = await sha256(signString)
+    // const sign = await sha256(signString)
 
     // Construct the payment URL
     const paymentUrl = new URL("https://payeer.com/merchant/")
@@ -52,7 +52,7 @@ export async function createPayment(data: PaymentData): Promise<PaymentResponse>
       m_curr: "USD",
       m_desc: Buffer.from(data.description).toString("base64"),
       m_orderid: orderId,
-      m_sign: sign,
+      m_sign: signString,
       success_url: `${appUrl}/payment/success`,
       fail_url: `${appUrl}/payment/failed`,
       status_url: `${appUrl}/api/payeer/callback`,
