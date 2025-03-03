@@ -6,6 +6,13 @@ import Link from 'next/link';
 import { ShoppingCart } from 'lucide-react';
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
+
+
 export default function Home() {
 
   const products = [
@@ -105,6 +112,25 @@ export default function Home() {
 
 
 
+
+<div className="swipers">
+{/* <Swiper
+      slidesPerView={2}
+      spaceBetween={10}
+      loop={true}
+      autoplay={{ delay: 2000, disableOnInteraction: false }}
+      modules={[Autoplay]}
+    >
+      {["/images/logo.png", "/images/logo.png", "/images/logo.png", "/images/logo.png", "/images/logo.png"].map((item, i) => (
+        <SwiperSlide key={i}>
+          <div className="min-w-[200px] h-[150px] bg-green-500 rounded-lg flex items-center justify-center text-white text-lg">
+            
+            <img src={item} className="h-full w-full" alt="" />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper> */}
+</div>
               {/* info about  website  */}
               <Websiteinfo/>
               {/* dislpay our products  */}

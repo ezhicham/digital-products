@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN; // Replace with your BotFather token
-const CHAT_ID = process.env.CHAT_TG_ID; // Replace with your chat ID
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN; // Your BotFather token
+const CHAT_ID = process.env.CHAT_TG_ID; // Your chat ID
+const APP_URL = "https://darkark.online/"; // Replace with your actual app URL
 
 export async function POST(req: Request) {
   try {
-    const { message } = await req.json();
+    const message = "👋 Hello! Click below to open the app:";
 
     if (!message) {
       return NextResponse.json({ error: "Message is required" }, { status: 400 });
@@ -16,7 +17,15 @@ export async function POST(req: Request) {
     const response = await fetch(telegramUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ chat_id: CHAT_ID, text: message }),
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message,
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: "🚀 Open App", url: APP_URL }],
+          ],
+        },
+      }),
     });
 
     const data = await response.json();
